@@ -10,7 +10,7 @@ async function bootstrap() {
   const port = configService.get<number>('host.port');
   app.useGlobalPipes(new ValidationPipe());
   app.enableCors();
-  await app.listen(3000);
+  await app.listen(port);
   Logger.log(`Server running on http://localhost:${port}`, 'Bootstrap');
 }
 bootstrap();
